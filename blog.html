@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Writing by Gidado Mukhtar on .NET, C#, AI, and open source.">
+    <title>Blog | Gidado Mukhtar</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <a href="index.html" class="logo">Gidado Mukhtar</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="blog.html" aria-current="page">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Blog</h1>
+        <p>Notes on .NET, C#, AI, and the projects I'm building</p>
+    </header>
+
+    <main class="section">
+
+        <div class="blog-controls">
+            <div class="search-field">
+                <label for="post-search">Search posts</label>
+                <input type="search" id="post-search" placeholder="Search by title, topic, or keyword">
+            </div>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter posts by category">
+            <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="dotnet" aria-pressed="false">.NET and C#</button>
+            <button class="filter-btn" data-filter="ai" aria-pressed="false">AI</button>
+            <button class="filter-btn" data-filter="open-source" aria-pressed="false">Open Source</button>
+        </div>
+
+        <div class="post-grid" id="post-grid">
+
+            <article class="post-card" data-category="open-source" data-search="dotnet docs pull request field keyword c# 14 microsoft open source">
+                <span class="badge">Open Source</span>
+                <h3>Adding Field Keyword Patterns to the .NET Docs</h3>
+                <p>My pull request to Microsoft's official .NET documentation adds practical examples of the C# 14 <code>field</code> keyword. It was reviewed and merged by the .NET docs team.</p>
+                <a class="btn btn-outline" href="https://github.com/dotnet/docs/pull/55777" target="_blank" rel="noopener">View the pull request</a>
+            </article>
+
+            <article class="post-card" data-category="open-source" data-search="errorcopy pro vs code extension copilot claude chatgpt typescript esbuild">
+                <span class="badge">Open Source</span>
+                <h3>ErrorCopy Pro: Understanding Errors Faster</h3>
+                <p>A VS Code extension that packages an error with its surrounding code and sends it to GitHub Copilot, Claude, or ChatGPT. Built with the VS Code API, TypeScript, and esbuild.</p>
+                <a class="btn btn-outline" href="https://github.com/gidadomukhtar/error-copy-pro" target="_blank" rel="noopener">View the code</a>
+            </article>
+
+            <article class="post-card" data-category="ai" data-search="ai dotnet enterprise genai python microsoft extensions ai">
+                <span class="badge">AI</span>
+                <h3>Ditch Python for AI? Why .NET Is a Strong Choice for Enterprise GenAI</h3>
+                <p>Why I think .NET deserves a serious look for building production AI systems, and where the trade-offs are.</p>
+                <a class="btn btn-outline" href="https://lnkd.in/p/ej2kP2B5" target="_blank" rel="noopener">Read the LinkedIn post</a>
+            </article>
+
+        </div>
+
+        <p class="no-results" id="no-results" hidden>No posts match your search. Try a different word or category.</p>
+
+        <p class="coming-soon">More articles are on the way.</p>
+
+    </main>
+
+    <footer class="site-footer">
+        © 2026 Gidado Mukhtar | Gid Paragon
+    </footer>
+
+</body>
+
+</html>

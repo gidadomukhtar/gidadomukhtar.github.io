@@ -1,0 +1,589 @@
+/* ==========================================================
+   Gidado Mukhtar - Personal Site
+   One stylesheet for every page (index.html and blog.html)
+   ========================================================== */
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #0B132B;
+    color: #E5E5E5;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #FDC500;
+}
+
+:focus-visible {
+    outline: 3px solid #FDC500;
+    outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
+
+h2 {
+    color: #FDC500;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* ---------- Navigation ---------- */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background: #0B132B;
+    border-bottom: 1px solid #1C2541;
+}
+
+.logo {
+    font-weight: bold;
+    color: #FDC500;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: #FDC500;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #FDC500;
+    color: #0B132B;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #FFD700;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #FDC500;
+    border: 2px solid #FDC500;
+}
+
+.btn-outline:hover {
+    background: #FDC500;
+    color: #0B132B;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    text-align: center;
+    padding: 110px 20px;
+    background: linear-gradient(135deg, #0B132B, #1C2541);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 14px;
+}
+
+.typing {
+    font-size: 1.3rem;
+    color: #FDC500;
+    min-height: 2em;
+    margin-bottom: 24px;
+}
+
+/* ---------- Layout sections ---------- */
+.section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* ---------- Profile (About top) ---------- */
+.profile {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #FDC500;
+    box-shadow: 0 10px 40px rgba(253, 197, 0, 0.2);
+}
+
+.profile-info h3 {
+    font-size: 2rem;
+    color: #FDC500;
+    margin-bottom: 4px;
+}
+
+.profile-info .role {
+    color: #B0B0B0;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.profile-info p {
+    margin-bottom: 20px;
+}
+
+/* ---------- Social icons ---------- */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 46px;
+    height: 46px;
+    padding: 0 12px;
+    border-radius: 23px;
+    background: #1C2541;
+    color: #FFFFFF;
+    border: 1px solid #2A3F5F;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    border-color: #FDC500;
+    color: #FDC500;
+}
+
+/* ---------- About text blocks ---------- */
+.about-block {
+    margin-top: 50px;
+}
+
+.about-block h3 {
+    color: #FDC500;
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+}
+
+.about-block p {
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
+
+.about-block .highlight {
+    color: #FDC500;
+    font-weight: bold;
+}
+
+/* ---------- Closing statement ---------- */
+.closing {
+    text-align: center;
+    padding: 60px 20px;
+    margin: 0 auto 40px;
+    max-width: 900px;
+    background: linear-gradient(135deg, #0B132B, #1C2541);
+    border-radius: 10px;
+}
+
+.closing h2 {
+    margin-bottom: 16px;
+}
+
+.closing p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.cta-row {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* ---------- Cards and grids ---------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1C2541;
+    padding: 22px;
+    border-radius: 10px;
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    border-color: #FDC500;
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    color: #FDC500;
+    margin-bottom: 8px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card .tag {
+    color: #B0B0B0;
+    font-size: 0.9rem;
+}
+
+.card details {
+    margin-top: 10px;
+}
+
+.card summary {
+    cursor: pointer;
+    color: #FDC500;
+}
+
+.card ul {
+    margin: 10px 0 0 20px;
+}
+
+/* ---------- Contact ---------- */
+.contact-form {
+    display: grid;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #2A3F5F;
+    border-radius: 6px;
+    background: #1C2541;
+    color: #FFFFFF;
+    font: inherit;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #FDC500;
+    color: #0B132B;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #FFD700;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+/* ---------- Accessibility helper ---------- */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #1C2541;
+    color: #B0B0B0;
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================
+   Blog page
+   ========================================================== */
+.page-header {
+    text-align: center;
+    padding: 100px 20px 70px;
+    background: linear-gradient(135deg, #0B132B, #1C2541);
+}
+
+.page-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #B0B0B0;
+    font-size: 1.1rem;
+}
+
+.blog-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.search-field {
+    flex: 1 1 260px;
+    max-width: 420px;
+}
+
+.search-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #B0B0B0;
+}
+
+.search-field input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #FDC500;
+    border-radius: 6px;
+    background: #1C2541;
+    color: #FFFFFF;
+    font: inherit;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 2px solid #FDC500;
+    border-radius: 20px;
+    background: transparent;
+    color: #FDC500;
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.filter-btn[aria-pressed="true"],
+.filter-btn:hover {
+    background: #FDC500;
+    color: #0B132B;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #1C2541;
+    padding: 24px;
+    border-radius: 10px;
+    border-left: 4px solid #FDC500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(253, 197, 0, 0.18);
+}
+
+.post-card[hidden] {
+    display: none;
+}
+
+.badge {
+    align-self: flex-start;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #FDC500;
+    color: #0B132B;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.post-card h3 {
+    color: #FDC500;
+    font-size: 1.3rem;
+}
+
+.post-card p {
+    color: #E5E5E5;
+    flex-grow: 1;
+}
+
+.post-card .btn {
+    align-self: flex-start;
+    margin: 0;
+}
+
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #B0B0B0;
+}
+
+.no-results[hidden] {
+    display: none;
+}
+
+.coming-soon {
+    text-align: center;
+    margin-top: 50px;
+    color: #B0B0B0;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: #0B132B;
+        border-bottom: 1px solid #1C2541;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 14px 24px;
+    }
+
+    .site-nav {
+        position: sticky;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .profile {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+}
