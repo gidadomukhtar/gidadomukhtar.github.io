@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "errorcopy-ai-error-explainer",
+      "title": "ErrorCopy: AI Error Explainer",
+      "category": "Open Source",
+      "date": "2026-11-10",
+      "excerpt": "A VS Code extension that packages an error with its surrounding code and sends it to GitHub Copilot, Claude, or ChatGPT.",
+      "body": "Every developer knows the moment. The code breaks, a red squiggle appears, and you start copying the error message, then the line, then the function around it.\n\nErrorCopy: AI Error Explainer does that copying for you. Put your cursor on an error and press Ctrl+Shift+E. It collects the diagnostic from VS Code's Problems panel, including the message, severity, source, error code, and exact range. It also includes any selected text and the code around the cursor, then copies a structured prompt to your clipboard.\n\n## How the providers work\n\n- GitHub Copilot: if you have Copilot access, the extension sends the prompt through VS Code's Language Model API and streams the answer into a dedicated output panel.\n- Copilot Web, Claude, and ChatGPT: the prompt is copied, the site opens in your browser, and you press Ctrl+V in the chat box. These sites control their own chat inputs, so an extension can't reliably fill them in.\n- Stack Overflow: opens a search for the diagnostic text.\n- Copy Prompt Only: for when you just need the text.\n\n## Privacy\n\nThe extension doesn't call any AI API itself. It masks common secrets such as API keys, tokens, passwords, and Bearer credentials. Masking is pattern-based, so always read the prompt before you send it. File paths are excluded by default, and you can turn off surrounding code or change how many lines are included.\n\n## What I learned\n\nPackaging took longer than writing the extension. Keeping source files out of the package, matching the publisher ID, and dealing with Marketplace naming rules all needed real debugging. Names are also permanent: the Marketplace keeps a name reserved even after you delete an extension, so choose yours carefully.",
+      "link": "https://github.com/gidadomukhtar/error-copy-pro",
+      "linkLabel": "View the code on GitHub"
+    },
+    {
+      "id": "dotnet-docs-field-keyword",
+      "title": "Adding Field Keyword Patterns to the .NET Docs",
+      "category": ".NET and C#",
+      "date": "2026-09-03",
+      "excerpt": "My pull request to Microsoft's official .NET documentation adds practical examples of the C# 14 field keyword. It was reviewed and merged by the .NET docs team.",
+      "body": "C# 14 adds the field keyword, which lets a property use its own compiler-generated backing field. The existing docs explained the syntax, but readers had no practical patterns to copy.\n\nMy pull request adds a section called Common patterns with field, with three examples:\n\n- Lazy initialization, where a getter creates the value the first time it is read.\n- MVVM property notifications, where a setter raises a change event only when the value actually changes.\n- Data normalization, where a setter trims and lowercases input before storing it.\n\nReview pushed me to make the examples null-safe, use ToLowerInvariant instead of ToLower, and fix the Markdown formatting. The change was merged into the official C# 14 what's new page.",
+      "link": "https://github.com/dotnet/docs/pull/55777",
+      "linkLabel": "View the pull request"
+    },
+    {
+      "id": "dotnet-genai-linkedin",
+      "title": "Ditch Python for AI? Why .NET Is a Strong Choice for Enterprise GenAI",
+      "category": "AI",
+      "date": "2026-09-02",
+      "excerpt": "Why I think .NET deserves a serious look for building production AI systems, and where the trade-offs are.",
+      "body": "",
+      "link": "https://lnkd.in/p/ej2kP2B5",
+      "linkLabel": "Read the LinkedIn post"
+    }
+  ]
+}

@@ -31,48 +31,32 @@
 
     <main class="section">
 
-        <div class="blog-controls">
-            <div class="search-field">
-                <label for="post-search">Search posts</label>
-                <input type="search" id="post-search" placeholder="Search by title, topic, or keyword">
+        <section id="list-view">
+            <div class="blog-controls">
+                <div class="search-field">
+                    <label for="post-search">Search posts</label>
+                    <input type="search" id="post-search" placeholder="Search by title, topic, or keyword">
+                </div>
             </div>
-        </div>
 
-        <div class="filters" role="group" aria-label="Filter posts by category">
-            <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
-            <button class="filter-btn" data-filter="dotnet" aria-pressed="false">.NET and C#</button>
-            <button class="filter-btn" data-filter="ai" aria-pressed="false">AI</button>
-            <button class="filter-btn" data-filter="open-source" aria-pressed="false">Open Source</button>
-        </div>
+            <div class="filters" id="filters" role="group" aria-label="Filter posts by category"></div>
 
-        <div class="post-grid" id="post-grid">
+            <div class="post-grid" id="post-grid"></div>
 
-            <article class="post-card" data-category="open-source" data-search="dotnet docs pull request field keyword c# 14 microsoft open source">
-                <span class="badge">Open Source</span>
-                <h3>Adding Field Keyword Patterns to the .NET Docs</h3>
-                <p>My pull request to Microsoft's official .NET documentation adds practical examples of the C# 14 <code>field</code> keyword. It was reviewed and merged by the .NET docs team.</p>
-                <a class="btn btn-outline" href="https://github.com/dotnet/docs/pull/55777" target="_blank" rel="noopener">View the pull request</a>
-            </article>
+            <p class="no-results" id="no-results" hidden>No posts match your search. Try another word or category.</p>
+            <p class="no-results" id="load-error" hidden>Posts could not be loaded. Check your connection, or visit the live site.</p>
 
-            <article class="post-card" data-category="open-source" data-search="errorcopy pro vs code extension copilot claude chatgpt typescript esbuild">
-                <span class="badge">Open Source</span>
-                <h3>ErrorCopy Pro: Understanding Errors Faster</h3>
-                <p>A VS Code extension that packages an error with its surrounding code and sends it to GitHub Copilot, Claude, or ChatGPT. Built with the VS Code API, TypeScript, and esbuild.</p>
-                <a class="btn btn-outline" href="https://github.com/gidadomukhtar/error-copy-pro" target="_blank" rel="noopener">View the code</a>
-            </article>
+            <p class="coming-soon">More articles are on the way.</p>
+        </section>
 
-            <article class="post-card" data-category="ai" data-search="ai dotnet enterprise genai python microsoft extensions ai">
-                <span class="badge">AI</span>
-                <h3>Ditch Python for AI? Why .NET Is a Strong Choice for Enterprise GenAI</h3>
-                <p>Why I think .NET deserves a serious look for building production AI systems, and where the trade-offs are.</p>
-                <a class="btn btn-outline" href="https://lnkd.in/p/ej2kP2B5" target="_blank" rel="noopener">Read the LinkedIn post</a>
-            </article>
-
-        </div>
-
-        <p class="no-results" id="no-results" hidden>No posts match your search. Try a different word or category.</p>
-
-        <p class="coming-soon">More articles are on the way.</p>
+        <article id="post-view" class="post-view" hidden>
+            <a class="back-link" href="blog.html">← Back to all posts</a>
+            <span class="badge" id="post-category"></span>
+            <h1 id="post-title"></h1>
+            <p class="meta" id="post-meta"></p>
+            <div class="post-body" id="post-body"></div>
+            <div class="post-actions" id="post-link"></div>
+        </article>
 
     </main>
 

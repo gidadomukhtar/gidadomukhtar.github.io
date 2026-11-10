@@ -1,0 +1,37 @@
+# Decap CMS configuration: lets you publish posts from /admin without writing code.
+# Changes are saved as commits to posts.json in this repo.
+
+site_url: "https://gidadomukhta.me"
+display_url: "https://gidadomukhta.me"
+
+backend:
+  name: github
+  repo: gidadomukhtar/gidadomukhtar.github.io
+  branch: main
+  # Required for GitHub login on a static site. Fill in after the OAuth setup:
+  # base_url: "https://YOUR-OAUTH-PROXY-URL"
+
+media_folder: "images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Post"
+    file: "posts.json"
+    format: "json"
+    fields:
+      - label: "Posts"
+        name: "posts"
+        widget: "list"
+        label_singular: "Post"
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "ID (lowercase, no spaces)", name: "id", widget: "string", hint: "Example: my-new-post" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Category", name: "category", widget: "select", options: [".NET and C#", "AI", "Open Source", "Company Update", "Learning"] }
+          - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+          - { label: "Short summary", name: "excerpt", widget: "text" }
+          - { label: "Full post", name: "body", widget: "text", required: false, hint: "Blank line between paragraphs. Start a line with ## for a heading, ### for a subheading, or - for bullets." }
+          - { label: "Link (optional)", name: "link", widget: "string", required: false, hint: "Used for posts hosted elsewhere, such as LinkedIn or GitHub." }
+          - { label: "Link text (optional)", name: "linkLabel", widget: "string", required: false }
