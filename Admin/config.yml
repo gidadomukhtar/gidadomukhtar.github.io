@@ -5,11 +5,9 @@ site_url: "https://gidadomukhta.me"
 display_url: "https://gidadomukhta.me"
 
 backend:
-  name: github
-  repo: gidadomukhtar/gidadomukhtar.github.io
-  branch: main
-  # Required for GitHub login on a static site. Fill in after the OAuth setup:
-  # base_url: "https://YOUR-OAUTH-PROXY-URL"
+  name: turbo-github
+  turbo_site_id: 24016276-1600-4154-9662-f32dac95b2b9
+  
 
 media_folder: "images/blog"
 public_folder: "/images/blog"
