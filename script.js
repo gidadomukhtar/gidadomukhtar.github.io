@@ -205,7 +205,7 @@
         document.title = "Blog | Gidado Mukhtar";
     }
 
-    function showPost(post) {
+   function showPost(post) {
         listView.hidden = true;
         postView.hidden = false;
         document.title = post.title + " | Gidado Mukhtar";
@@ -218,15 +218,35 @@
         body.textContent = "";
         renderBody(body, post.body);
 
+        // High priority: install button in the sticky side panel
+        const side = document.getElementById("post-install");
+        side.textContent = "";
+        if (post.installUrl) {
+            const install = make("a", "btn", "Install from Marketplace");
+            install.href = post.installUrl;
+            install.target = "_blank";
+            install.rel = "noopener";
+            side.appendChild(install);
+            side.appendChild(make("p", "side-note", "Available on the VS Code Marketplace."));
+        }
+
+        // Lowest priority: source link at the end of the article
         const actions = document.getElementById("post-link");
         actions.textContent = "";
-        if (post.link) {
+        if (post.repoUrl) {
+            const repo = make("a", "btn btn-outline", "View source on GitHub");
+            repo.href = post.repoUrl;
+            repo.target = "_blank";
+            repo.rel = "noopener";
+            actions.appendChild(repo);
+        } else if (post.link) {
             const link = make("a", "btn btn-outline", post.linkLabel || "Read more");
             link.href = post.link;
             link.target = "_blank";
             link.rel = "noopener";
             actions.appendChild(link);
         }
+
         window.scrollTo(0, 0);
     }
 
