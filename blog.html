@@ -29,7 +29,7 @@
         <p>Notes on .NET, C#, AI, and the projects I'm building.</p>
     </header>
 
-    <main class="section">
+    <main class="section section-wide">
 
         <section id="list-view">
             <div class="blog-controls">
@@ -49,14 +49,17 @@
             <p class="coming-soon">More articles are on the way.</p>
         </section>
 
-        <article id="post-view" class="post-view" hidden>
-            <a class="back-link" href="blog.html">← Back to all posts</a>
-            <span class="badge" id="post-category"></span>
-            <h1 id="post-title"></h1>
-            <p class="meta" id="post-meta"></p>
-            <div class="post-body" id="post-body"></div>
-            <div class="post-actions" id="post-link"></div>
-        </article>
+        <div id="post-view" class="post-layout" hidden>
+            <aside class="post-side" id="post-install"></aside>
+            <article class="post-view">
+                <a class="back-link" href="blog.html">← Back to all posts</a>
+                <span class="badge" id="post-category"></span>
+                <h1 id="post-title"></h1>
+                <p class="meta" id="post-meta"></p>
+                <div class="post-body" id="post-body"></div>
+                <div class="post-actions" id="post-link"></div>
+            </article>
+        </div>
 
     </main>
 
