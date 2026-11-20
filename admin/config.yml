@@ -35,3 +35,5 @@ collections:
               - { label: "Full post", name: "body", widget: "text", required: false, hint: "Blank line between paragraphs. Start a line with ## for a heading, ### for a subheading, or - for bullets." }
               - { label: "Link (optional)", name: "link", widget: "string", required: false, hint: "Used for posts hosted elsewhere, such as LinkedIn or GitHub." }
               - { label: "Link text (optional)", name: "linkLabel", widget: "string", required: false }
+              - { label: "Install link (side panel)", name: "installUrl", widget: "string", required: false, hint: "Marketplace or store link. Shown as a sticky button." }
+              - { label: "Source link (end of post)", name: "repoUrl", widget: "string", required: false, hint: "GitHub or source-code link. Shown at the end of the post." }
