@@ -1022,3 +1022,52 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+/* ---------- Post layout with side panel ---------- */
+.section-wide {
+    max-width: 1240px;
+}
+
+.post-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 720px);
+    gap: 48px;
+    justify-content: center;
+    align-items: start;
+    padding: 60px 20px 80px;
+}
+
+.post-layout .post-view {
+    padding: 0;
+    margin: 0;
+    max-width: none;
+}
+
+.post-side {
+    position: sticky;
+    top: 100px;
+}
+
+.post-side:empty {
+    display: none;
+}
+
+.post-side .btn {
+    width: 100%;
+    margin: 0 0 12px;
+}
+
+.post-side .side-note {
+    color: #B0B0B0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .post-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .post-side {
+        position: static;
+        order: -1;
+    }
+}
