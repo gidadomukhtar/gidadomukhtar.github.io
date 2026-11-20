@@ -269,6 +269,7 @@
             link.rel = "noopener";
             actions.appendChild(link);
         }
+        loadComments(post);
 
         window.scrollTo(0, 0);
     }
